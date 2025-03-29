@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f5c8e13b2d.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+    <!-- || STARTING -->
+    <div class="container">
+
+        <!--|| MAIN WEATHER REPORT BOX (RIGHT-SIDE) -->
+        <div class="weather-report">
+
+            <!-- || SEARCH SECTION -->
+            <div class="search-section">
+                <div class="search-input-wrapper">
+                    <input type="text" id="search" placeholder="Search for a city..." spellcheck="false" autocomplete="off">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <div class="search-suggestions">
+                    </div>
+                </div>
+                <div class="loader-container">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+
+            <!-- || NAVIGATION BAR -->
+            <nav>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+
+            <!-- || CURRENT WEATHER STATUS BOX -->
+            <div class="current-status">
+
+                <!-- BOX-1  MAIN WEATHER BOX-->
+                <div class="weather weather-box1">
+                    <div class="weather-heading">
+                        <div class="weather-icon">
+                            <i class="fa-solid fa-cloud"></i>
+                        </div>
+                        <div class="weather-description">
+                            <h3>weather</h3>
+                            <h4>What's the weather.</h4>
+                        </div>
+                    </div>
+                    <div class="weather-temperature">
+                        <div class="temperature">
+                            <div class="temp">
+                                <h2 id="temp">-</h2>
+                                <img src="images/celsius.svg" alt="">
+                            </div>
+                        </div>
+                        <p id="description">Enter city to see weather</p>
+                    </div>
+
+                    <div class="weather-details">
+                        <div class="box">
+                            <p>Pressure</p>
+                            <h3 id="pressure">-mb</h3>
+                        </div>
+                        <div class="box">
+                            <p>Visibility</p>
+                            <h3 id="visibility">- km</h3>
+                        </div>
+                        <div class="box">
+                            <p>Humidity</p>
+                            <h3 id="humidity">-%</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!--|| Box-2 -->
+                <!-- Sunrise and Sunset-->
+                <div class="weather weather-box2">
+                    <div class="more-details">
+                        <div class="more-detail-box">
+                            <p>Sunrise & Sunset</p>
+                            <div class="sunrise-sunset">
+                                <div class="sunrise">
+                                    <span>🌄</span>
+                                    <div class="sunrise-status">
+                                        <p>Sunrise</p>
+                                        <h3 id="sunrise-time">-</h3>
+                                    </div>
+                                </div>
+                                <div class="sunset">
+                                    <span>🌆</span>
+                                    <div class="sunset-status">
+                                        <p>Sunset</p>
+                                        <h3 id="sunset-time">-</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- and UVI Index  -->
+
+                        <div class="more-detail-box uvi-rays-area">
+                            <img src="images/clear.png" alt="">
+                            <div class="uvi-mesurement">
+                                <div class="uvi-rays-status">
+                                    <div id="uvi-rays">- UVI</div>
+                                    <div class="uvi-level">-</div>
+                                </div>
+                                <div class="uvi-level-desc">
+                                    <span class="uvi-level2">-</span> risk of from UV rays
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <!-- || SLIDEBAR -->
+        <div class="slidebar">
+            <!-- Time and Date -->
+            <div class="time-date">
+                <h2 class="time">-</h2>
+                <p class="date">Loading...</p>
+            </div>
+
+            <!-- Location -->
+            <div class="location">
+                <h2 id="city">City</h2>
+                <h3 id="country"><i class="fa-sharp fa-solid fa-location-dot"></i>State</h3>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
